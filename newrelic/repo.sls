@@ -12,7 +12,4 @@ newrelic-repo:
     - keyserver: keyserver.ubuntu.com
   {% endif %}
     - require_in:
-        {% if salt['pkg.list_pkgs']().get('php', False) -%}
-        - pkg: newrelic-php5
-        {% endif %}
         - pkg: newrelic-sysmond
